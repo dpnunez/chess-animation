@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import { colors, spacing } from './src/theme'
+import { colors, spacing, fontFamily } from './src/theme'
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors,
       spacing,
+      fontFamily,
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

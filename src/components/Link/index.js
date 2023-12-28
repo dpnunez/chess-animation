@@ -6,8 +6,6 @@ import { motion } from 'framer-motion'
 export const Link = ({ children, ...rest }) => {
   const [hover, setHover] = useState('hidden')
 
-  console.log('hover', hover)
-
   const anim = (variants) => {
     return {
       initial: 'hidden',
