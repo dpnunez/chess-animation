@@ -16,11 +16,6 @@
   }
 } */
 
-
-* {
-  font-family: Montserrat, sans-serif;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   @apply bg-background-light;

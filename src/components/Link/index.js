@@ -2,8 +2,9 @@ import LinkNext from 'next/link'
 import { useState } from 'react'
 import { line } from './anim'
 import { motion } from 'framer-motion'
+import { cn } from '@/styles/helpers'
 
-export const Link = ({ children, ...rest }) => {
+export const Link = ({ children, className, ...rest }) => {
   const [hover, setHover] = useState('hidden')
 
   const anim = (variants) => {
@@ -16,7 +17,7 @@ export const Link = ({ children, ...rest }) => {
   return (
     <LinkNext {...rest}>
       <div
-        className="relative overflow-hidden pb-[2px] mt-[2px] "
+        className={cn('relative overflow-hidden pb-[2px] mt-[2px]', className)}
         onMouseEnter={() => setHover('show')}
         onMouseLeave={() => setHover('hidden')}
       >

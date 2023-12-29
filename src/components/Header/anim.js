@@ -45,7 +45,7 @@ export const menu = {
     height: 'auto',
     transition: {
       duration: 1,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.83, 0, 0.17, 1],
     },
   },
   exit: {

@@ -12,7 +12,7 @@ export const line = {
       duration: 0.25,
     },
     transitionEnd: {
-      x: '-100%',
+      x: '-110%',
     },
   },
 }

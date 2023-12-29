@@ -24,7 +24,10 @@ export const Header = () => {
                   key={item.label}
                   onHoverStart={() => setMenuActive(item.showMenu || null)}
                 >
-                  <Link href={item.href} className="text-black font-semibold">
+                  <Link
+                    href={item.href}
+                    className="text-black font-semibold text-lg"
+                  >
                     {item.label}
                   </Link>
                 </motion.div>
@@ -51,7 +54,7 @@ const Menu = ({ show }) => {
           {...anim(menu)}
         >
           <div className="py-7">
-            <h2 className="text-md">Escolha seu curso</h2>
+            <h2 className="text-md text-black">Escolha seu curso</h2>
           </div>
 
           <div className="flex justify-between gap-8">
@@ -109,14 +112,14 @@ const Background = ({ show }) => {
 }
 
 const Logo = () => (
-  <div className="flex gap-2">
+  <LinkNext className="flex gap-2" href="/">
     <AnimatedLogo className="w-12 h-12" />
     <div className="text-black text-2xl font-bold leading-6">
       Chess
       <br />
       Name
     </div>
-  </div>
+  </LinkNext>
 )
 
 const items = [
