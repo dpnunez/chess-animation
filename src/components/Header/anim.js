@@ -79,3 +79,29 @@ export const menuItem = {
     },
   },
 }
+
+export const mobileNavigation = {
+  initial: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+}
