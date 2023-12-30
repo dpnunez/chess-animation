@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <main className={`mt-header-height ${montserrat.variable}`}>
+      <main className={montserrat.variable}>
         <Header />
         <Component {...pageProps} />
       </main>

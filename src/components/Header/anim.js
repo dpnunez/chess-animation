@@ -1,6 +1,4 @@
-import { stagger } from 'framer-motion'
-
-export const line = {
+const line = {
   initial: {
     opacity: 0,
     width: 0,
@@ -18,7 +16,7 @@ export const line = {
   },
 }
 
-export const background = {
+const background = {
   initial: {
     opacity: 0,
   },
@@ -37,7 +35,7 @@ export const background = {
   },
 }
 
-export const menu = {
+const menu = {
   initial: {
     height: 0,
   },
@@ -57,7 +55,7 @@ export const menu = {
   },
 }
 
-export const menuItem = {
+const menuItem = {
   initial: {
     y: 200,
   },
@@ -80,7 +78,7 @@ export const menuItem = {
   },
 }
 
-export const mobileNavigation = {
+const mobileNavigation = {
   initial: {
     opacity: 0,
     y: -100,
@@ -108,7 +106,7 @@ export const mobileNavigation = {
 
 const MENU_BASE_DURATION = 0.75
 
-export const logo = {
+const logo = {
   initial: {
     opacity: 0,
     y: -100,
@@ -134,7 +132,7 @@ export const logo = {
   },
 }
 
-export const navigationDesktop = {
+const navigationDesktop = {
   initial: {
     opacity: 0,
     y: -100,
@@ -161,7 +159,7 @@ export const navigationDesktop = {
   },
 }
 
-export const action = {
+const action = {
   initial: {
     opacity: 0,
     y: -100,
@@ -185,4 +183,15 @@ export const action = {
       ease: [0.83, 0, 0.17, 1],
     },
   },
+}
+
+export {
+  line,
+  background,
+  menu,
+  menuItem,
+  mobileNavigation,
+  logo,
+  navigationDesktop,
+  action,
 }

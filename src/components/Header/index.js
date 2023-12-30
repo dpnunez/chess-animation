@@ -18,8 +18,11 @@ export const Header = () => {
         className="fixed w-screen top-0 z-10 bg-white"
         onHoverEnd={() => setMenuActive(false)}
       >
-        <motion.div className="bg-primary-500 h-[6px]" {...anim(line)} />
-        <div className="container mx-auto h-[100px] flex items-center justify-between">
+        <motion.div
+          className="bg-primary-500 h-[6px] absolute"
+          {...anim(line)}
+        />
+        <div className="container mx-auto h-header-height flex items-center justify-between">
           <div className="flex gap-24 items-center max-sm:flex-1 max-sm:justify-between">
             <Logo />
             <Navigation handleMenu={setMenuActive} />
