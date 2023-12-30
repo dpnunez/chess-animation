@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { line } from './anim'
+import { action, line } from './anim'
 
 import { useState } from 'react'
 import { anim } from '@/styles/helpers'
@@ -24,9 +24,9 @@ export const Header = () => {
             <Logo />
             <Navigation handleMenu={setMenuActive} />
           </div>
-          <div className="max-sm:hidden">
+          <motion.div {...anim(action)} className="max-sm:hidden">
             <ButtonAction>Acessar Conteúdo</ButtonAction>
-          </div>
+          </motion.div>
         </div>
         <div className="h-[1px] bg-gray-300 w-full" />
         <Menu show={Boolean(menuActive)} />

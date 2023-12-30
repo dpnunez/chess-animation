@@ -3,7 +3,7 @@ import { Link } from '@/components'
 import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { useState } from 'react'
 import { anim } from '@/styles/helpers'
-import { mobileNavigation } from './anim'
+import { mobileNavigation, navigationDesktop } from './anim'
 
 export const Navigation = ({ handleMenu }) => {
   return (
@@ -17,8 +17,9 @@ export const Navigation = ({ handleMenu }) => {
 const DesktopNavigation = ({ handleMenu }) => {
   return (
     <nav className="gap-20 max-sm:hidden flex">
-      {items.map((item) => (
+      {items.map((item, i) => (
         <motion.div
+          {...anim(navigationDesktop, i)}
           key={item.label}
           onHoverStart={() => handleMenu(item.showMenu || null)}
         >

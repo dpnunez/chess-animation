@@ -105,3 +105,84 @@ export const mobileNavigation = {
     },
   },
 }
+
+const MENU_BASE_DURATION = 0.75
+
+export const logo = {
+  initial: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: MENU_BASE_DURATION,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+}
+
+export const navigationDesktop = {
+  initial: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+  },
+  enter: (i) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: i * 0.05,
+      duration: MENU_BASE_DURATION,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  }),
+  exit: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+}
+
+export const action = {
+  initial: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: MENU_BASE_DURATION,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -100,
+    scale: 0.9,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+}
