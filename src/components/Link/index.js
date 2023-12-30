@@ -17,7 +17,10 @@ export const Link = ({ children, className, ...rest }) => {
   return (
     <LinkNext {...rest}>
       <div
-        className={cn('relative overflow-hidden pb-[2px] mt-[2px]', className)}
+        className={cn(
+          'relative overflow-hidden pb-[2px] mt-[2px] mx-1',
+          className,
+        )}
         onMouseEnter={() => setHover('show')}
         onMouseLeave={() => setHover('hidden')}
       >

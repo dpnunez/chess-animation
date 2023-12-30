@@ -3,6 +3,13 @@ const card = {
     scale: 0.9,
     opacity: 0,
   },
+  hover: {
+    scale: 1.02,
+    transition: {
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
   enter: (i) => ({
     scale: 1,
     opacity: 1,
@@ -15,15 +22,14 @@ const card = {
 }
 
 const container = {
-  hidden: {
+  initial: {
     opacity: 0,
   },
-  visible: {
+  enter: {
     opacity: 1,
     transition: {
       duration: 1,
-      when: 'beforeChildren',
-      staggerChildren: 0.3,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 }
