@@ -185,6 +185,25 @@ const action = {
   },
 }
 
+const menuDirection = {
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+  hide: {
+    opacity: 0,
+    y: -100,
+    transition: {
+      duration: 1,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+}
+
 export {
   line,
   background,
@@ -194,4 +213,5 @@ export {
   logo,
   navigationDesktop,
   action,
+  menuDirection,
 }

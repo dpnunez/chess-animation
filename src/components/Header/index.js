@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { action, line } from './anim'
+import { action, line, menuDirection } from './anim'
 
 import { useState } from 'react'
 import { anim } from '@/styles/helpers'
@@ -8,13 +8,17 @@ import { Menu } from './Menu'
 import { Logo } from './Logo'
 import { ButtonAction } from './ButtonAction'
 import { Navigation } from './Navigation'
+import { useScrollDirection } from '@/hooks'
 
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(null)
+  const dir = useScrollDirection()
+  const showStatus = dir === 'up' ? 'show' : 'hide'
 
   return (
     <>
       <motion.div
+        {...anim(menuDirection, null, { animate: showStatus })}
         className="fixed w-screen top-0 z-10 bg-white"
         onHoverEnd={() => setMenuActive(false)}
       >
