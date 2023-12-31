@@ -4,8 +4,8 @@ import { card, title } from './anim'
 
 export const Instructors = () => {
   return (
-    <div className="container mx-auto my-16">
-      <motion.h2 {...anim(title)} className="text-3xl font-bold mb-12">
+    <div className="container mx-auto my-section-spacing">
+      <motion.h2 {...anim(title)} className="section-title">
         Instrutores
       </motion.h2>
 

@@ -20,3 +20,8 @@ body {
   color: rgb(var(--foreground-rgb));
   @apply bg-background-light;
 }
+
+
+.section-title {
+  @apply text-3xl font-bold mb-title-spacing;
+}
