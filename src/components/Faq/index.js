@@ -8,7 +8,7 @@ export const Faq = () => {
   const [openAccortion, setOpenAccortion] = useState(null)
 
   return (
-    <div className="my-section-spacing container mx-auto mb-96">
+    <div className="my-section-spacing container mx-auto ">
       <h2 className="section-title text-center">Perguntas frequentes</h2>
       <div className="flex flex-col gap-4 md:max-w-[50%] mx-auto">
         {accordions.map((accordion, i) => (
@@ -47,7 +47,10 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
       })}
       className="rounded-3xl cursor-pointer overflow-hidden bg-primary-500/10 hover:bg-primary-500/15 transition-colors"
     >
-      <div className="p-11 flex justify-between" onClick={handleClick}>
+      <button
+        className="p-11 flex w-full justify-between"
+        onClick={handleClick}
+      >
         {title}
         <motion.div
           {...anim(arrow, null, {
@@ -58,7 +61,7 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
         >
           <ChevronDownIcon width={24} height={24} />
         </motion.div>
-      </div>
+      </button>
       <AnimatePresence initial={false}>
         {open && (
           <motion.div {...anim(contentAnim)}>
