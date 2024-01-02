@@ -4,6 +4,7 @@ import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { useState } from 'react'
 import { anim } from '@/styles/helpers'
 import { mobileNavigation, navigationDesktop } from './anim'
+import { pages } from '@/constants'
 
 export const Navigation = ({ handleMenu }) => {
   return (
@@ -17,7 +18,7 @@ export const Navigation = ({ handleMenu }) => {
 const DesktopNavigation = ({ handleMenu }) => {
   return (
     <nav className="gap-20 max-sm:hidden flex">
-      {items.map((item, i) => (
+      {pages.map((item, i) => (
         <motion.div
           {...anim(navigationDesktop, i)}
           key={item.label}
@@ -52,7 +53,7 @@ const MobileNavigation = () => {
             {...anim(mobileNavigation)}
           >
             <div className="flex flex-col items-start gap-5">
-              {items.map((item) => (
+              {pages.map((item) => (
                 <Link
                   onClick={() => setNavigation(false)}
                   key={item.label}
@@ -69,23 +70,3 @@ const MobileNavigation = () => {
     </div>
   )
 }
-
-const items = [
-  {
-    label: 'Home',
-    href: '/',
-  },
-  {
-    showMenu: 'cursos',
-    label: 'Blog',
-    href: '/blog',
-  },
-  {
-    label: 'About',
-    href: '/about',
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
-  },
-]

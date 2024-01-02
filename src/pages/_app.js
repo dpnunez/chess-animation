@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { Header } from '@/components'
+import { Footer, Header } from '@/components'
 import { Montserrat } from 'next/font/google'
 import ReactLenis from '@studio-freight/react-lenis'
 
@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }) {
       <main className={montserrat.variable} data-scroll-container>
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </ReactLenis>
   )
