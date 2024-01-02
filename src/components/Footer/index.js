@@ -11,7 +11,7 @@ export const Footer = () => {
     <div className="overflow-hidden">
       <Divider />
       <motion.footer {...anim(container)} className="py-9 text-gray-400">
-        <div className="container mx-auto flex gap-11">
+        <div className="container mx-auto flex flex-col md:flex-row md:gap-11 gap-5">
           <div className="flex flex-col flex-1 gap-20 pr-20">
             <h3 className=" text-2xl">
               Lorem ipsum dolor sit amet <br />
@@ -20,7 +20,7 @@ export const Footer = () => {
             <Logo />
             <p className=" font-medium text-xl">Copyright © dpnunez 2024</p>
           </div>
-          <div className="flex-1 flex">
+          <div className="flex-1 flex md:flex-row flex-col">
             <div className="flex-1">
               <h3 className="text-xl mb-4 text-black">Navegação</h3>
               <ul className="flex flex-col items-start">

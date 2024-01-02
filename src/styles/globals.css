@@ -25,3 +25,7 @@ body {
 .section-title {
   @apply text-3xl font-bold mb-title-spacing;
 }
+
+.page-wrapper {
+  @apply pt-header-height container mx-auto;
+}

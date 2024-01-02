@@ -6,7 +6,7 @@ const pages = [
   },
   {
     label: 'Analises de Partidas',
-    href: '/analisys',
+    href: '/analysis',
   },
   {
     label: 'Sobre',

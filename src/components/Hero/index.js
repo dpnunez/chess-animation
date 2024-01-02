@@ -4,7 +4,7 @@ import { card, container } from './anim'
 
 export const Hero = () => {
   return (
-    <motion.div className="container mx-auto h-screen pt-header-height flex flex-col gap-10 md:flex-row">
+    <motion.div className="container mx-auto h-screen page-wrapper flex flex-col gap-10 md:flex-row">
       <motion.div
         {...anim(container)}
         className="flex-[1] flex flex-col justify-center gap-16 items-center md:items-start my-10 max-md:text-center"
