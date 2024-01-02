@@ -1,19 +1,19 @@
 const pages = [
   {
-    label: 'Home',
-    href: '/',
-  },
-  {
     showMenu: 'cursos',
-    label: 'Blog',
-    href: '/blog',
+    label: 'Cursos',
+    href: '/courses',
   },
   {
-    label: 'About',
+    label: 'Analises de Partidas',
+    href: '/analisys',
+  },
+  {
+    label: 'Sobre',
     href: '/about',
   },
   {
-    label: 'Contact',
+    label: 'Fale Conosco',
     href: '/contact',
   },
 ]

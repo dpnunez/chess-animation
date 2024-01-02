@@ -2,12 +2,15 @@ import { pages, socials } from '@/constants'
 import { Divider } from '../Divider'
 import { Logo } from '../Header/Logo'
 import { Link } from '../Link'
+import { motion } from 'framer-motion'
+import { anim } from '@/styles/helpers'
+import { container } from './anim'
 
 export const Footer = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Divider />
-      <footer className="py-9 text-gray-400">
+      <motion.footer {...anim(container)} className="py-9 text-gray-400">
         <div className="container mx-auto flex gap-11">
           <div className="flex flex-col flex-1 gap-20 pr-20">
             <h3 className=" text-2xl">
@@ -56,7 +59,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </motion.footer>
+    </div>
   )
 }
