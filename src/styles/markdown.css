@@ -13,3 +13,7 @@
 .markdown h3 {
     @apply text-xl;
 }
+
+.markdown p:has(> img:only-child)  {
+    @apply -mx-20 my-12 hover:scale-105 transition-all duration-300 ease-in-out;
+}

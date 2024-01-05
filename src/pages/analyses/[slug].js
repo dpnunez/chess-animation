@@ -10,7 +10,10 @@ export default function Analysis({ data }) {
 export const getServerSideProps = async ({ params }) => {
   const { data } = await strapi.get(`analyses/${params.slug}`).json()
   const { content } = data.attributes
-  const converter = new Showdown.Converter()
+  const converter = new Showdown.Converter({
+    tables: true,
+    simplifiedAutoLink: true,
+  })
   const html = converter.makeHtml(content)
 
   return {
