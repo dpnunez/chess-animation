@@ -19,7 +19,7 @@ body {
 }
 
 .page-wrapper {
-  @apply pt-header-height container mx-auto;
+  @apply pt-header-height container mx-auto my-12;
 }
 
 [class^="board-container"] {

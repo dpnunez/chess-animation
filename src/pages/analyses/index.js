@@ -1,28 +1,27 @@
 import { strapi } from '@/api'
-import Link from 'next/link'
+import { AnalysisList } from '@/components'
 
-export default function Analysis({ content }) {
-  const data = content.data
-
-  return (
-    <div className="container mx-auto page-wrapper">
-      <h1>Analises</h1>
-      {data.map(({ id, attributes }) => (
-        <Link href={`analyses/${attributes.slug}`} key={id}>
-          <h2>{attributes.title}</h2>
-          <p>{attributes.description}</p>
-        </Link>
-      ))}
-    </div>
-  )
+export default function Analysis({ data }) {
+  return <AnalysisList {...data} />
 }
 
-export const getServerSideProps = async () => {
-  const data = await strapi.get('analyses?').json()
+export const getServerSideProps = async (props) => {
+  const data = await strapi
+    .get('analyses', {
+      searchParams: {
+        populate: '*',
+        'pagination[pageSize]': 5,
+        'pagination[page]': props.query.page || 1,
+        ...(props.query.search && {
+          'filters[title][$containsi]': props.query.search,
+        }),
+      },
+    })
+    .json()
 
   return {
     props: {
-      content: data,
+      data,
     },
   }
 }
