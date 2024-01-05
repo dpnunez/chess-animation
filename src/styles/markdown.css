@@ -1,0 +1,15 @@
+.markdown h1, .markdown h2, .markdown h3 {
+    @apply font-bold text-gray-950 mb-4 mt-8;
+}
+
+.markdown h1 {
+    @apply text-3xl;
+}
+
+.markdown h2 {
+    @apply text-2xl;
+}
+
+.markdown h3 {
+    @apply text-xl;
+}

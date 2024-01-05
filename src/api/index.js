@@ -11,10 +11,5 @@ export const strapi = ky.extend({
         )
       },
     ],
-    afterResponse: [
-      (_req, _opt, res) => {
-        return res.json()
-      },
-    ],
   },
 })

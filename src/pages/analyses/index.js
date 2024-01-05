@@ -8,7 +8,7 @@ export default function Analysis({ content }) {
     <div className="container mx-auto page-wrapper">
       <h1>Analises</h1>
       {data.map(({ id, attributes }) => (
-        <Link href={`analysis/${attributes.slug}`} key={id}>
+        <Link href={`analyses/${attributes.slug}`} key={id}>
           <h2>{attributes.title}</h2>
           <p>{attributes.description}</p>
         </Link>
