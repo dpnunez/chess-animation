@@ -22,7 +22,7 @@ export const AnalysisPost = ({
     <>
       <motion.img
         {...anim(subtitleAnim)}
-        src="https://source.unsplash.com/random?chess"
+        src={banner || 'https://source.unsplash.com/random?chess'}
         alt="Análises"
         className="w-screen h-64 mt-header-height object-cover"
       />

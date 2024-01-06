@@ -29,3 +29,7 @@ body {
 [class^="board-container"] [class^="white"] {
   background-color: aqua;
 }
+
+*:active, *:focus {
+  @apply outline-primary-500;
+}

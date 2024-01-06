@@ -10,7 +10,7 @@ export const getServerSideProps = async (props) => {
     .get('analyses', {
       searchParams: {
         populate: '*',
-        'pagination[pageSize]': 5,
+        'pagination[pageSize]': 12,
         'pagination[page]': props.query.page || 1,
         ...(props.query.search && {
           'filters[title][$containsi]': props.query.search,
