@@ -1,15 +1,37 @@
-const usePagination = ({ page, pageCount }) => {
-  const isMiddle = page > 1 && page < pageCount
-  const offset = isMiddle ? 1 : 2
-  const initial = Math.max(page - offset, 1)
-  const final = Math.min(pageCount, page + offset)
+const EDGE_OFSSET = 3
 
-  return {
-    show: Array.from({ length: final - initial + 1 }, (_, i) => initial + i),
-    rightDots: final < pageCount,
-    leftDots: initial > 1,
+const usePagination = ({ page, pageCount }) => {
+  const isLeft = page < EDGE_OFSSET
+  const isRight = page > pageCount - EDGE_OFSSET
+  const isMiddle = !isLeft && !isRight && pageCount > EDGE_OFSSET
+  const canShowDots = pageCount > EDGE_OFSSET + 1
+
+  const _show = () => {
+    if (isLeft) {
+      return Array.from(
+        { length: Math.min(EDGE_OFSSET + 1, pageCount) },
+        (_, i) => i + 1,
+      )
+    }
+
+    if (isRight) {
+      return Array.from(
+        { length: Math.min(EDGE_OFSSET + 1, pageCount) },
+        (_, i) => pageCount - i,
+      ).reverse()
+    }
+
+    return Array.from({ length: 3 }, (_, i) => page - 1 + i)
+  }
+
+  const value = {
+    show: _show(),
+    rightDots: (isLeft || isMiddle) && canShowDots,
+    leftDots: (isRight || isMiddle) && canShowDots,
     currentPage: Number(page),
   }
+
+  return value
 }
 
 export { usePagination }

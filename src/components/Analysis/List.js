@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
+  AnimatedText,
   Pagination,
   PaginationContent,
   PaginationEllipsis,
@@ -16,9 +17,9 @@ import { cardListAnim, filterTag, found } from './anim'
 import { useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
+import { formatDate } from '@/utils/date'
 
 const PageHeader = ({ counter }) => {
-  console.log(counter)
   const [filter, setFilter] = useState(null)
   const router = useRouter()
   const searchRef = useRef(null)
@@ -81,6 +82,7 @@ const PageHeader = ({ counter }) => {
           )}
         </AnimatePresence>
         <input
+          placeholder="Pesquisar Analise"
           ref={searchRef}
           className="border-b-2 p-1 border-b-primary-500 w-80"
           type="text"
@@ -135,7 +137,7 @@ const PostCard = ({ attributes, id, animOrder }) => {
             dateTime={attributes.createdAt}
             className="rounded-lg bg-primary-500 text-white px-2 py-1 font-bold text-sm"
           >
-            {new Date(attributes.createdAt).toLocaleDateString()}
+            {formatDate(attributes.createdAt)}
           </time>
           <h3 className="text-xl line-clamp-2 overflow-hidden w-full">
             {attributes.title}
@@ -158,8 +160,6 @@ const PaginationWrapper = ({ meta }) => {
     delete _query.page
     return `?${new URLSearchParams(_query).toString()}`
   }, [query])
-
-  if (paginationData.show.length < 1) return null
 
   return (
     <Pagination className="mt-10">
@@ -198,21 +198,35 @@ const PaginationWrapper = ({ meta }) => {
 }
 
 export const AnalysisList = ({ data, meta }) => {
-  console.log(meta.pagination.total)
   return (
     <motion.div className="page-wrapper">
       <PageHeader counter={meta.pagination.total} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-20">
-        {data.map(({ attributes, id }, index) => (
-          <PostCard
-            key={id}
-            attributes={attributes}
-            id={id}
-            animOrder={index}
-          />
-        ))}
-      </div>
-      <PaginationWrapper meta={meta} />
+
+      {meta.pagination.total ? (
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-20">
+            {data.map(({ attributes, id }, index) => (
+              <PostCard
+                key={id}
+                attributes={attributes}
+                id={id}
+                animOrder={index}
+              />
+            ))}
+          </div>
+          <PaginationWrapper meta={meta} />
+        </>
+      ) : (
+        <NotFound />
+      )}
     </motion.div>
+  )
+}
+
+const NotFound = () => {
+  return (
+    <div className="w-full h-96 flex items-center justify-center">
+      <AnimatedText>Nenhum Resultado Econtrado</AnimatedText>
+    </div>
   )
 }

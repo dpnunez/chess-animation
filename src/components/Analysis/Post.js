@@ -3,6 +3,7 @@ import { anim } from '@/styles/helpers'
 import { motion } from 'framer-motion'
 import { boardAnim, subtitleAnim, titleAnim } from './anim'
 import { CalendarIcon } from '@radix-ui/react-icons'
+import { formatDate } from '@/utils/date'
 
 export const AnalysisPost = ({
   pgn,
@@ -12,7 +13,7 @@ export const AnalysisPost = ({
   content,
   banner,
 }) => {
-  const date = new Date(createdAt).toLocaleDateString('pt-BR', {
+  const date = formatDate(createdAt, {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
@@ -26,6 +27,9 @@ export const AnalysisPost = ({
         alt="Análises"
         className="w-screen h-64 mt-header-height object-cover"
       />
+      <h1 className="sr-only">{title}</h1>
+      <h2 className="sr-only">{description}</h2>
+      <h3 className="sr-only">{date}</h3>
       <div className="container mx-auto mt-20 mb-16 py-0">
         <motion.h2
           {...anim(subtitleAnim)}

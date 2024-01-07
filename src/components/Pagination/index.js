@@ -5,8 +5,10 @@ import {
   DotsHorizontalIcon,
 } from '@radix-ui/react-icons'
 
-import { cn } from '@/styles/helpers'
+import { motion } from 'framer-motion'
+import { anim, cn } from '@/styles/helpers'
 import Link from 'next/link'
+import { indicator } from './anim'
 
 const Pagination = ({ className, ...props }) => (
   <nav
@@ -29,59 +31,88 @@ PaginationContent.displayName = 'PaginationContent'
 const PaginationItem = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn('flex items-center py-1', className)}
+    className={cn('flex items-center py-1 aspect-square min-w-1', className)}
     {...props}
   />
 ))
 PaginationItem.displayName = 'PaginationItem'
 
 const PaginationLink = ({ className, isActive, ...props }) => (
-  <PaginationItem className="rounded-md hover:bg-primary-500/5 transition-colors">
+  <PaginationItem className="relative">
     <Link
       aria-current={isActive ? 'page' : undefined}
       className={cn(
-        'flex items-center px-4 py-1.5 rounded-lg transition-all',
+        'flex items-center px-4 py-1.5 rounded-lg transition-colors',
         className,
-        {
-          'bg-primary-500 text-white': isActive,
-        },
       )}
       {...props}
     />
+    <motion.div
+      {...anim(indicator)}
+      {...props}
+      animate={isActive ? 'enter' : 'initial'}
+      className="absolute flex items-center justify-center text-white top-0 w-full bottom-0 bg-primary-500 rounded-lg"
+    ></motion.div>
   </PaginationItem>
 )
 PaginationLink.displayName = 'PaginationLink'
 
-const PaginationPrevious = ({ className, ...props }) => (
-  <PaginationLink
-    aria-label="Go to previous page"
-    size="default"
-    className={cn('gap-1 transition-all', className, {
-      'opacity-50': props.disabled,
-      'pointer-events-none': props.disabled,
-    })}
-    {...props}
-  >
-    <ChevronLeftIcon className="h-4 w-4" />
-    <span>Anterior</span>
-  </PaginationLink>
-)
+const PaginationPrevious = ({ className, ...props }) => {
+  const [hover, setHover] = React.useState(false)
+  return (
+    <motion.div
+      onHoverStart={() => setHover(true)}
+      onHoverEnd={() => setHover(false)}
+    >
+      <PaginationLink
+        aria-label="Go to previous page"
+        size="default"
+        className={cn('gap-1 transition-all', className, {
+          'opacity-50': props.disabled,
+          'pointer-events-none': props.disabled,
+        })}
+        {...props}
+      >
+        <motion.div
+          animate={{
+            x: hover ? -5 : 0,
+          }}
+          className="relative"
+        >
+          <ChevronLeftIcon className="h-4 w-4" />
+        </motion.div>
+        <span>Anterior</span>
+      </PaginationLink>
+    </motion.div>
+  )
+}
 PaginationPrevious.displayName = 'PaginationPrevious'
 
-const PaginationNext = ({ className, ...props }) => (
-  <PaginationLink
-    aria-label="Go to next page"
-    size="default"
-    className={cn('gap-1 transition-all', className, {
-      'opacity-50': props.disabled,
-      'pointer-events-none': props.disabled,
-    })}
-    {...props}
-  >
-    <span>Próximo</span>
-    <ChevronRightIcon className="h-4 w-4" />
-  </PaginationLink>
-)
+const PaginationNext = ({ className, ...props }) => {
+  const [hover, setHover] = React.useState(false)
+
+  return (
+    <motion.div
+      onHoverStart={() => setHover(true)}
+      onHoverEnd={() => setHover(false)}
+    >
+      <PaginationLink
+        aria-label="Go to next page"
+        size="default"
+        className={cn('gap-1 transition-all', className, {
+          'opacity-50': props.disabled,
+          'pointer-events-none': props.disabled,
+        })}
+        {...props}
+      >
+        <span>Próximo</span>
+        <motion.div animate={hover ? { x: 5 } : { x: 0 }} className="relative">
+          <ChevronRightIcon className="h-4 w-4" />
+        </motion.div>
+      </PaginationLink>
+    </motion.div>
+  )
+}
 
 const PaginationEllipsis = ({ className, ...props }) => (
   <span
