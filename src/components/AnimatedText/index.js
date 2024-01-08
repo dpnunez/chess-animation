@@ -1,3 +1,4 @@
+import { cn } from '@/styles/helpers'
 import { defaultAnimation } from './anim'
 import { motion } from 'framer-motion'
 
@@ -21,7 +22,7 @@ const AnimatedText = ({
             },
           },
         }}
-        className="text-gray-400 text-bold text-4xl"
+        className={cn('text-gray-400 text-bold text-4xl', className)}
       >
         {children.split('').map((char, index) => (
           <motion.span
