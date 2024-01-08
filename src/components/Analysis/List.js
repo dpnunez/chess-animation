@@ -53,8 +53,8 @@ const PageHeader = ({ counter }) => {
 
   return (
     <div className="flex w-full justify-between items-center mb-12 flex-col md:flex-row gap-12">
-      <motion.h2 className="text-3xl ">
-        Analises de Partidas
+      <div className="flex flex-col md:flex-row items-center">
+        <motion.h2 className="text-3xl ">Analises de Partidas</motion.h2>
         <AnimatePresence>
           {filter && (
             <motion.span
@@ -65,8 +65,8 @@ const PageHeader = ({ counter }) => {
             </motion.span>
           )}
         </AnimatePresence>
-      </motion.h2>
-      <form className="flex gap-4 items-center justify-end" onSubmit={onSubmit}>
+      </div>
+      <div className="flex flex-col items-center md:flex-row">
         <AnimatePresence>
           {filter && (
             <motion.button
@@ -81,31 +81,36 @@ const PageHeader = ({ counter }) => {
             </motion.button>
           )}
         </AnimatePresence>
-        <input
-          placeholder="Pesquisar Analise"
-          ref={searchRef}
-          className="border-b-2 p-1 border-b-primary-500 w-80"
-          type="text"
-        />
-        <button
-          className="flex gap-2 items-center bg-black text-white px-4 py-4 rounded-lg group text-2xl"
-          type="submit"
+        <form
+          className="flex gap-4 items-center justify-end ml-6"
+          onSubmit={onSubmit}
         >
-          <MagnifyingGlassIcon
-            height={20}
-            width={20}
-            className="group-hover:scale-125 transition-all"
+          <input
+            placeholder="Pesquisar Analise"
+            ref={searchRef}
+            className="border-b-2 p-1 border-b-primary-500 w-80 text-lg py-2"
+            type="text"
           />
-        </button>
-        <button
-          type="button"
-          onClick={handleClearSearch}
-          disabled={!filter}
-          className=" hover:bg-black/15 p-4 rounded-lg transition-all text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Limpar
-        </button>
-      </form>
+          <button
+            className="flex gap-2 items-center bg-black text-white px-4 py-4 rounded-lg group text-2xl"
+            type="submit"
+          >
+            <MagnifyingGlassIcon
+              height={20}
+              width={20}
+              className="group-hover:scale-125 transition-all"
+            />
+          </button>
+          <button
+            type="button"
+            onClick={handleClearSearch}
+            disabled={!filter}
+            className=" hover:bg-black/15 p-4 rounded-lg transition-all text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Limpar
+          </button>
+        </form>
+      </div>
     </div>
   )
 }

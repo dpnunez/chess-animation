@@ -5,7 +5,7 @@ const AnimatedText = ({
   className,
   children,
   animation = defaultAnimation,
-  stagging = 0.02,
+  stagging = 0.015,
 }) => {
   return (
     <div className={className}>
