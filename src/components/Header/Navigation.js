@@ -58,7 +58,7 @@ const MobileNavigation = () => {
                   onClick={() => setNavigation(false)}
                   key={item.label}
                   href={item.href}
-                  className="text-white font-semibold text-5xl"
+                  className="text-white font-normal text-5xl"
                 >
                   {item.label}
                 </Link>

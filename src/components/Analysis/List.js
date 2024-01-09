@@ -82,7 +82,7 @@ const PageHeader = ({ counter }) => {
           )}
         </AnimatePresence>
         <form
-          className="flex gap-4 items-center justify-end ml-6"
+          className="flex max-md:flex-col gap-4 items-center justify-end ml-6"
           onSubmit={onSubmit}
         >
           <input

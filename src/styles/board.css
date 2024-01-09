@@ -686,20 +686,6 @@ cg-board square.current-premove {
   padding: .4rem .7rem
 }
 
-body ::-webkit-scrollbar,
-body ::-webkit-scrollbar-corner {
-  width: .5rem;
-  background: #ffffff
-}
-
-body ::-webkit-scrollbar-thumb {
-  background: #484745
-}
-
-body ::-webkit-scrollbar-thumb:hover,
-body ::-webkit-scrollbar-thumb:active {
-  background: #6d6c6b
-}
 
 @font-face {
   font-family: "lpv-fontello";
