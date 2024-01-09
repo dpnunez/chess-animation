@@ -4,7 +4,7 @@ import useSWR from 'swr'
 import { useState } from 'react'
 import { anim } from '@/styles/helpers'
 import { Background } from './Background'
-import { Menu } from './Menu'
+import { Menu } from './MenuCourses'
 import { Logo } from './Logo'
 import { ButtonAction } from './ButtonAction'
 import { Navigation } from './Navigation'
@@ -28,12 +28,7 @@ export const Header = () => {
   const dir = useScrollDirection()
   const showStatus = dir === 'up' ? 'show' : 'hide'
 
-  const { data: courses, isLoading: loadingCourses } = useSWR(
-    'courses',
-    getCourses,
-  )
-
-  console.log(courses)
+  const { data: courses } = useSWR('courses', getCourses)
 
   return (
     <>

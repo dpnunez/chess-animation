@@ -38,25 +38,27 @@ const aboutSections = [
     title: 'Sobre a empresa',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://source.unsplash.com/random/800x600',
+    image: 'http://localhost:1337/uploads/pexels_schach_1660753_7522c96f80.jpg',
   },
   {
     title: 'Nossa missão',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://source.unsplash.com/random/800x601',
+    image: 'http://localhost:1337/uploads/pexels_pixabay_209728_1b72e5d994.jpg',
   },
   {
     title: 'Nossa visão',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://source.unsplash.com/random/800x602',
+    image:
+      'http://localhost:1337/uploads/pexels_felix_mittermeier_957312_4466f50556.jpg',
   },
   {
     title: 'Nossos valores',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://source.unsplash.com/random/800x603',
+    image:
+      'http://localhost:1337/uploads/pexels_pixabay_260024_2_8bd64d1c3b.jpg',
   },
 ]
 

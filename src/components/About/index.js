@@ -75,7 +75,6 @@ const ImageGallery = ({ currentImage, imagePosition }) => {
                   }}
                 />
                 <motion.img
-                  whileHover={{ scale: 1.05 }}
                   className="absolute w-[80%] h-[90%] rounded-2xl "
                   src={currentImage}
                   key={currentImage}
@@ -92,7 +91,7 @@ const ImageGallery = ({ currentImage, imagePosition }) => {
 
 const AboutPage = () => {
   const [imagePosition, setImagePosition] = useState('left')
-  const [currentImage, setCurrentImage] = useState(null)
+  const [currentImage, setCurrentImage] = useState(aboutSections[0].image)
 
   return (
     // <ReactLenis root>

@@ -36,11 +36,18 @@ export const Menu = ({ show, data }) => {
   )
 }
 
-const CourseCard = ({ cover, name, slug }) => {
+const CourseCard = ({ cover, name, slug, externalUrl }) => {
   const [hover, setHover] = useState(false)
-
+  const linkProps = externalUrl
+    ? {
+        href: externalUrl,
+        target: '_blank',
+      }
+    : {
+        href: `/courses/${slug}`,
+      }
   return (
-    <LinkNext href={`/courses/${slug}`} className="flex flex-col gap-4 group">
+    <LinkNext {...linkProps} className="flex flex-col gap-4 group">
       <motion.div
         className="relative"
         onHoverStart={() => setHover(true)}
