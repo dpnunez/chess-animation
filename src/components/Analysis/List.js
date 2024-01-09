@@ -54,7 +54,7 @@ const PageHeader = ({ counter }) => {
   return (
     <div className="flex w-full justify-between items-center mb-12 flex-col md:flex-row gap-12">
       <div className="flex flex-col md:flex-row items-center">
-        <motion.h2 className="text-3xl ">Analises de Partidas</motion.h2>
+        <motion.h2 className="page-title">Analises de Partidas</motion.h2>
         <AnimatePresence>
           {filter && (
             <motion.span

@@ -11,8 +11,8 @@ import { Navigation } from './Navigation'
 import { useScrollDirection } from '@/hooks'
 import { strapi } from '@/api'
 
-const getCourses = async (url) => {
-  const response = await strapi.get(url, {
+const getCourses = async () => {
+  const response = await strapi.get('courses', {
     searchParams: {
       populate: '*',
       'pagination[pageSize]': 4,
@@ -28,7 +28,7 @@ export const Header = () => {
   const dir = useScrollDirection()
   const showStatus = dir === 'up' ? 'show' : 'hide'
 
-  const { data: courses } = useSWR('courses', getCourses)
+  const { data: courses } = useSWR('coursesPreview', getCourses)
 
   return (
     <>

@@ -22,6 +22,10 @@ body {
   @apply pt-header-height container mx-auto my-12;
 }
 
+.page-title {
+  @apply text-3xl font-bold;
+}
+
 [class^="board-container"] {
   border: none !important;
 }
