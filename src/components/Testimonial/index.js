@@ -28,7 +28,7 @@ const Testimonial = () => {
         Lorem ipsum dolor sit amet, consectetur
         <br /> adipiscing elit. Proin tincidunt
       </h3>
-      <div className="flex w-full overflow-auto py-3 mt-10">
+      <div className="flex w-full overflow-auto py-3 mt-10 scrollbar-none">
         {testimonials.map((item, i) => {
           return (
             <motion.div
