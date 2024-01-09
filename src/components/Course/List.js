@@ -37,7 +37,7 @@ const CoursesPage = ({ data }) => {
                   {...(course.externalUrl && {
                     target: '_blank',
                   })}
-                  href={course.externalUrl || `/cursos/${course.slug}`}
+                  href={course.externalUrl || `/courses/${course.slug}`}
                   className="text-2xl text-primary-500"
                 >
                   Saiba mais
