@@ -8,7 +8,7 @@ import { backgroundImage, currentImageAnim, textAnim, variants } from './anim'
 
 const HeadeAbout = () => {
   return (
-    <div className="flex gap-4 flex-col items-center justify-center mt-20">
+    <div className="max-md:mb-48 flex gap-4 flex-col items-center justify-center mt-20">
       <AnimatedText
         animation={textAnim}
         className="text-md uppercase font-bold text-primary-500"
@@ -34,7 +34,7 @@ const AboutItemWrapper = ({ children, isRight, onViewportEnter }) => {
   return (
     <motion.div
       className={cn(
-        'flex flex-col gap-4 justify-center md:w-[45%] min-h-[100dvh] items-start',
+        'flex flex-col gap-4 justify-center md:w-[45%] md:min-h-[100dvh] items-start max-md:mb-32',
         {
           'mr-auto': isRight,
           'ml-auto': !isRight,
@@ -49,7 +49,7 @@ const AboutItemWrapper = ({ children, isRight, onViewportEnter }) => {
 
 const ImageGallery = ({ currentImage, imagePosition }) => {
   return (
-    <div className="absolute w-full h-full">
+    <div className="absolute w-full h-full max-md:hidden">
       <motion.div
         initial="left"
         variants={variants}
