@@ -21,7 +21,13 @@ export const getServerSideProps = async (props) => {
 
   return {
     props: {
-      data,
+      data: {
+        data: data.data.map((e) => ({
+          ...e.attributes,
+          thumb: e.attributes.thumb.data.attributes.formats.medium.url,
+        })),
+        meta: data.meta,
+      },
     },
   }
 }

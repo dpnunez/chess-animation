@@ -38,27 +38,25 @@ const aboutSections = [
     title: 'Sobre a empresa',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'http://localhost:1337/uploads/pexels_schach_1660753_7522c96f80.jpg',
+    image: 'https://picsum.photos/536/354',
   },
   {
     title: 'Nossa missão',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'http://localhost:1337/uploads/pexels_pixabay_209728_1b72e5d994.jpg',
+    image: 'https://picsum.photos/seed/picsum/536/354',
   },
   {
     title: 'Nossa visão',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image:
-      'http://localhost:1337/uploads/pexels_felix_mittermeier_957312_4466f50556.jpg',
+    image: 'https://picsum.photos/id/1060/536/354?blur=2',
   },
   {
     title: 'Nossos valores',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image:
-      'http://localhost:1337/uploads/pexels_pixabay_260024_2_8bd64d1c3b.jpg',
+    image: 'https://picsum.photos/id/237/536/354',
   },
 ]
 

@@ -115,10 +115,10 @@ const PageHeader = ({ counter }) => {
   )
 }
 
-const PostCard = ({ attributes, id, animOrder }) => {
+const PostCard = ({ attributes, animOrder }) => {
   return (
     <motion.div
-      key={id}
+      key={attributes.slug}
       {...anim(cardListAnim, animOrder)}
       className="flex flex-col gap-4 group"
     >
@@ -129,7 +129,7 @@ const PostCard = ({ attributes, id, animOrder }) => {
         <Image
           priority
           alt=""
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${attributes.thumb.data.attributes.url}`}
+          src={attributes.thumb}
           width={500}
           height={500}
           style={{
@@ -203,6 +203,7 @@ const PaginationWrapper = ({ meta }) => {
 }
 
 export const AnalysisList = ({ data, meta }) => {
+  console.log(data)
   return (
     <motion.div className="page-wrapper">
       <PageHeader counter={meta.pagination.total} />
@@ -210,11 +211,10 @@ export const AnalysisList = ({ data, meta }) => {
       {meta.pagination.total ? (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-20">
-            {data.map(({ attributes, id }, index) => (
+            {data.map((attributes, index) => (
               <PostCard
-                key={id}
+                key={attributes.slug}
                 attributes={attributes}
-                id={id}
                 animOrder={index}
               />
             ))}

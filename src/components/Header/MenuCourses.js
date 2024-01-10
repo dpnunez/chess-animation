@@ -54,7 +54,7 @@ const CourseCard = ({ cover, name, slug, externalUrl }) => {
         onHoverEnd={() => setHover(false)}
       >
         <img
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${cover.data.attributes.url}`}
+          src={cover.data?.attributes.formats.small.url}
           className="w-full object-cover h-[200px] rounded-2xl group-hover:brightness-50 transition-all"
           alt=""
         />

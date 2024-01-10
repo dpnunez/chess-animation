@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['localhost'],
+    domains: [
+      'localhost',
+      'chess-strapi-aws-media-bucket.s3.sa-east-1.amazonaws.com',
+    ],
   },
 }
 

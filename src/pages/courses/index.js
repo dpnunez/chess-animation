@@ -19,9 +19,7 @@ export const getServerSideProps = async () => {
     props: {
       data: response.data.map((e) => ({
         ...e.attributes,
-        cover:
-          process.env.NEXT_PUBLIC_STRAPI_URL +
-          e.attributes.cover.data.attributes.url,
+        cover: e.attributes.cover.data.attributes.formats.medium.url,
       })),
     },
   }

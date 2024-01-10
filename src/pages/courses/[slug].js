@@ -18,9 +18,7 @@ export async function getServerSideProps({ params }) {
     props: {
       data: {
         ...res.data.attributes,
-        cover:
-          process.env.NEXT_PUBLIC_STRAPI_URL +
-          res.data.attributes.cover.data.attributes.url,
+        cover: res.data.attributes.cover.data.attributes.formats.large.url,
       },
     },
   }

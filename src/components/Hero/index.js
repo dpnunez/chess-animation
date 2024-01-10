@@ -39,7 +39,7 @@ const HeroImage = () => {
         >
           {/* Image 1 */}
           <motion.img
-            src="https://source.unsplash.com/random"
+            src="https://chess-strapi-aws-media-bucket.s3.sa-east-1.amazonaws.com/pexels_cottonbro_studio_8859414_b80ff927ea.jpg"
             className="h-full w-full object-cover"
             alt=""
           />
@@ -64,7 +64,7 @@ const HeroImage = () => {
         >
           {/* Image 2 */}
           <img
-            src="https://source.unsplash.com/random"
+            src="https://chess-strapi-aws-media-bucket.s3.sa-east-1.amazonaws.com/pexels_vlada_karpovich_6114965_82fc604cde.jpg"
             alt=""
             className="h-full w-full object-cover"
           />
