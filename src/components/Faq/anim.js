@@ -23,15 +23,35 @@ const contentText = {
 
 const container = {
   opened: {
-    backgroundColor: colors.primary[500],
-    marginLeft: -20,
-    marginRight: -20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    color: 'white',
+    // color: 'white',
+    transition: {
+      duration: 0.5,
+      delay: 0.2,
+    },
   },
   closed: {
     opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.2,
+    },
+  },
+}
+
+const cardBg = {
+  opened: {
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+  closed: {
+    y: '100%',
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
   },
 }
 
@@ -44,4 +64,4 @@ const arrow = {
   },
 }
 
-export { contentAnim, contentText, container, arrow }
+export { contentAnim, contentText, container, arrow, cardBg }

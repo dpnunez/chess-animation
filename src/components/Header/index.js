@@ -34,7 +34,7 @@ export const Header = () => {
     <>
       <motion.div
         {...anim(menuDirection, null, { animate: showStatus })}
-        className="fixed w-screen top-0 z-10 bg-white"
+        className="fixed w-screen top-0 z-50 bg-white"
         onHoverEnd={() => setMenuActive(false)}
       >
         <motion.div

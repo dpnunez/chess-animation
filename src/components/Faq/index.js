@@ -1,7 +1,7 @@
 import { anim } from '@/styles/helpers'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { arrow, container, contentAnim, contentText } from './anim'
+import { arrow, cardBg, container, contentAnim, contentText } from './anim'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { faq } from '@/constants'
 
@@ -34,14 +34,14 @@ const FaqItem = ({ accordion, openAccortion, setOpenAccortion }) => {
   })
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-  const x = useTransform(scrollYProgress, [0, 0.5], [-100, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.4], [0.87, 1])
 
   return (
     <div ref={ref}>
       <motion.div
-        className="opacity-0 scale-95"
+        className="opacity-0 scale-95 origin-bottom"
         key={accordion.id}
-        style={{ opacity, x }}
+        style={{ opacity, scale }}
       >
         <p className="sr-only">{accordion.title}</p>
         <p className="sr-only">{accordion.contnet}</p>
@@ -65,6 +65,11 @@ const AccortionTitle = ({ children }) => {
 const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
   const title = children.find((child) => child.type === AccortionTitle)
   const content = children.find((child) => child.type === AccortionContent)
+  const bgAnimation = anim(cardBg, null, {
+    opened: 'opened',
+    closed: 'closed',
+    animate: open ? 'opened' : 'closed',
+  })
 
   const handleClick = () => (open ? handleClose() : handleOpen())
 
@@ -75,10 +80,10 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
         closed: 'closed',
         animate: open ? 'opened' : 'closed',
       })}
-      className="rounded-3xl cursor-pointer overflow-hidden bg-primary-500/10 hover:bg-primary-500/15 transition-colors"
+      className="cursor-pointer overflow-hidden transition-colors relative"
     >
       <button
-        className="p-11 flex w-full justify-between"
+        className="p-8 flex w-full justify-between z-10 relative"
         onClick={handleClick}
       >
         {title}
@@ -94,11 +99,20 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
       </button>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div {...anim(contentAnim)}>
+          <motion.div {...anim(contentAnim)} className="z-10 relative">
             <div className="px-11 pb-11">{content}</div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <motion.div
+        {...bgAnimation}
+        className="absolute bg-primary-reverse bottom-0 h-full w-full left-0 pointer-events-none"
+      />
+      <motion.div
+        {...bgAnimation}
+        className="absolute z-20 backdrop-invert bottom-0 h-full w-full left-0 pointer-events-none"
+      />
     </motion.div>
   )
 }
