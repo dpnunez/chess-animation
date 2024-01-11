@@ -35,122 +35,164 @@ const socials = [
 
 const aboutSections = [
   {
-    title: 'Sobre a empresa',
+    title: 'Sobre a Empresa',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://picsum.photos/536/354',
+      'Somos apaixonados pelo xadrez e acreditamos que essa antiga arte do pensamento estratégico pode transformar vidas. Fundada com o objetivo de proporcionar uma experiência única de aprendizado, nossa empresa é dedicada a oferecer cursos de xadrez de alta qualidade, ministrados por mestres experientes e renomados.',
+    image:
+      'https://images.unsplash.com/photo-1693398785859-acff17ccf491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzc2luZXNzLGNoZXNzfHx8fHx8MTcwNDk5MDcxMQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
   },
   {
-    title: 'Nossa missão',
+    title: 'Nossa Missão',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://picsum.photos/seed/picsum/536/354',
+      'Nossa missão é democratizar o acesso ao conhecimento do xadrez, tornando-o acessível a todos, independentemente do nível de habilidade. Buscamos inspirar e capacitar nossos alunos a atingirem seu potencial máximo no xadrez, proporcionando uma plataforma educacional inovadora, envolvente e eficaz.',
+    image:
+      'https://images.unsplash.com/photo-1628867577980-a737edf95e15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzc2luZXNzLGNoZXNzfHx8fHx8MTcwNDk5MDc0MQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
   },
   {
-    title: 'Nossa visão',
+    title: 'Nossa Visão',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://picsum.photos/id/1060/536/354?blur=2',
+      'Vislumbramos um mundo onde o xadrez não é apenas um jogo, mas uma ferramenta poderosa para o desenvolvimento pessoal e cognitivo. Nossa visão é ser líderes no fornecimento de recursos educacionais de xadrez, criando uma comunidade global de jogadores apaixonados e aprendizes constantes.',
+    image:
+      'https://images.unsplash.com/photo-1633365087123-b3f2c305769a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzc2luZXNzLGNoZXNzfHx8fHx8MTcwNDk5MDc3OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
   },
   {
-    title: 'Nossos valores',
+    title: 'Nossos Valores',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae semper nisl. Sed euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit. Donec euismod, nisl vitae aliquam interdum, nisl velit tincidunt elit, vitae ullamcorper lorem leo quis velit.',
-    image: 'https://picsum.photos/id/237/536/354',
+      'Os valores que nos guiam incluem a excelência no ensino do xadrez, a inovação constante em métodos pedagógicos, a inclusividade para todos os interessados no jogo e o compromisso com a construção de uma comunidade educacional positiva e colaborativa.',
+    image:
+      'https://images.unsplash.com/photo-1628867578140-8af657ea0b14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzc2luZXNzLGNoZXNzfHx8fHx8MTcwNDk5MDc4Mw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
   },
 ]
 
 const testimonials = [
   {
-    name: 'Depoimento 1',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu convallis, facilisis enim eu, blandit nunc.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Laura Mendes',
+    text: 'Os cursos proporcionaram uma revolução no meu jogo! Com a orientação de mestres renomados, consegui elevar meu rating e, mais importante, minha compreensão estratégica. Recomendo a todos os apaixonados pelo xadrez.',
+    image: 'https://source.unsplash.com/random?person&1/100x100',
   },
   {
-    name: 'Depoimento 2',
-    text: 'Sed gravida, elit ut imperdiet accumsan, ligula ipsum ultricies metus, a luctus enim arcu ut nisi. Nulla facilisi. Aenean auctor, metus at cursus rhoncus, tortor justo congue quam, nec malesuada felis ligula eu elit.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Carlos Oliveira',
+    text: 'Uma experiência transformadora! A Professora Ana Oliveira desmistificou as aberturas para mim, tornando meu jogo mais confiante e sólido. Estou grato por essa jornada de aprendizado!',
   },
   {
-    name: 'Depoimento 3',
-    text: 'Fusce facilisis urna non sem ultrices, vel fringilla ante malesuada. Nullam bibendum bibendum lacus, nec lacinia orci dignissim in. Maecenas aliquam nisi vel efficitur malesuada.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Ana Silva',
+    text: 'Treinar com o Grande Mestre Ricardo Santos foi um divisor de águas. Seus insights e dicas práticas melhoraram minha abordagem tática, levando meu jogo para um nível superior. Uma escolha definitivamente acertada!',
+    image: 'https://source.unsplash.com/random?person&2/100x100',
   },
   {
-    name: 'Depoimento 4',
-    text: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis euismod metus a aliquet vehicula. Morbi bibendum orci et scelerisque facilisis.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Rafael Rocha',
+    text: 'A Mestra Clara Rocha vai além das jogadas. Sua abordagem focada na psicologia do xadrez me deu uma vantagem mental notável. Aprendi a antecipar movimentos e a entender a mente do meu oponente. Uma experiência enriquecedora!',
+    image: 'https://source.unsplash.com/random?person&3/100x100',
   },
   {
-    name: 'Depoimento 5',
-    text: 'Vivamus aliquet elit at ligula tincidunt, id bibendum nunc luctus. Nullam feugiat velit vitae nisi semper, sit amet dapibus enim posuere. Nunc congue tortor at justo ullamcorper, id sollicitudin quam pharetra.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Joana Oliveira',
+    text: 'Estou encantado com a qualidade dos cursos. Mestre Felipe Silva oferece uma perspectiva única, tornando cada lição valiosa. Minha jornada no xadrez ganhou clareza e propósito. Recomendo a todos os entusiastas!',
   },
   {
-    name: 'Depoimento 6',
-    text: 'Quisque sit amet mauris vitae dolor bibendum hendrerit. Aenean vitae augue sed velit scelerisque luctus non a lacus. Sed malesuada, felis eu volutpat tristique, odio augue scelerisque libero, vel luctus elit odio in ante.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Lucas Silva',
+    text: 'Iniciei minha jornada com o Professor Silva e, desde então, meu jogo nunca mais foi o mesmo. As estratégias que aprendi elevaram meu xadrez a um novo patamar. Sinto-me mais confiante a cada partida.',
+    image: 'https://source.unsplash.com/random?person&4/100x100',
   },
   {
-    name: 'Depoimento 7',
-    text: 'Integer sit amet sapien a felis efficitur fringilla. Nam bibendum augue et odio tempor, at malesuada metus sodales. Curabitur nec hendrerit metus, ac lacinia dui.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Isabela Rocha',
+    text: 'A Professora Oliveira tornou as aberturas do xadrez tão acessíveis! Sua abordagem clara e didática me deu uma compreensão profunda dos movimentos iniciais. Estou ansiosa para continuar aprendendo com ela.',
+    image: 'https://source.unsplash.com/random?person&5/100x100',
   },
   {
-    name: 'Depoimento 8',
-    text: 'Maecenas auctor justo non orci sagittis, eget vulputate ligula tincidunt. In hac habitasse platea dictumst. Sed nec tellus ligula.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Gabriel Santos',
+    text: 'Treinar com o GM Ricardo Santos foi uma oportunidade única. Sua experiência internacional e insights estratégicos trouxeram uma nova dimensão ao meu jogo. Recomendo a todos os que buscam a excelência.',
+    image: 'https://source.unsplash.com/random?person&1/100x100',
   },
   {
-    name: 'Depoimento 9',
-    text: 'Praesent euismod fringilla velit, vel convallis nisi facilisis eu. Suspendisse quis malesuada libero. Nullam interdum, ex a dignissim tempus, tortor lacus pharetra odio, at vestibulum dolor quam et neque.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Amanda Rocha',
+    text: 'A Mestra Clara Rocha não apenas me ensinou táticas avançadas, mas também como entender o pensamento do meu oponente. Isso fez toda a diferença em minhas partidas. Recomendo totalmente!',
+    image: 'https://source.unsplash.com/random?person&6/100x100',
   },
   {
-    name: 'Depoimento 10',
-    text: 'Vestibulum non risus eu justo fermentum eleifend nec at justo. Pellentesque ut efficitur orci. Quisque pharetra justo et mauris tincidunt, eu efficitur elit euismod.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Daniel Oliveira',
+    text: 'Graças aos cursos, meu entendimento das estratégias de meio de jogo e finais melhorou consideravelmente. Estou mais confiante em todas as fases do jogo, tudo graças ao Mestre Felipe Silva e sua abordagem única.',
+    image: 'https://source.unsplash.com/random?person&7/100x100',
   },
   {
-    name: 'Depoimento 11',
-    text: 'Cras in arcu nec ligula aliquam aliquam. Ut ac leo vitae elit auctor bibendum. Ut sodales tristique purus, id accumsan elit eleifend et.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Camila Silva',
+    text: 'A Professora Ana Oliveira é uma verdadeira especialista em aberturas. Seu conhecimento detalhado e a maneira como ela simplifica os conceitos complexos tornam as aulas extremamente valiosas. Não posso recomendar o suficiente!',
+    image: 'https://source.unsplash.com/random?person&8/100x100',
   },
   {
-    name: 'Depoimento 12',
-    text: 'Donec ultrices, erat eu convallis viverra, ligula ligula lacinia tellus, eu accumsan dui elit in arcu. Nunc auctor magna vitae dolor blandit, ut iaculis turpis elementum.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Lucas Oliveira',
+    text: 'Treinar com o GM Ricardo Santos é como ter uma aula com um verdadeiro mestre. Seu conhecimento profundo e perspicácia tática me fizeram perceber aspectos do jogo que eu nunca havia considerado antes. Excelente experiência!',
+    image: 'https://source.unsplash.com/random?person&9/100x100',
   },
   {
-    name: 'Depoimento 13',
-    text: 'Phasellus auctor velit id nulla feugiat tincidunt. Sed nec hendrerit mauris. Sed auctor sagittis purus eu laoreet.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Mariana Rocha',
+    text: 'A Mestra Clara Rocha trouxe um novo entendimento ao meu jogo, especialmente na psicologia do xadrez. Suas lições sobre como entender o oponente fazem com que minhas partidas se destaquem. Recomendo totalmente!',
+    image: 'https://source.unsplash.com/random?person&10/100x100',
   },
   {
-    name: 'Depoimento 14',
-    text: 'Fusce consectetur, libero vel accumsan ultricies, tortor ex tincidunt purus, eu ultricies neque quam ut arcu. Sed pellentesque fermentum arcu, non tincidunt velit varius vel.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Rodrigo Santos',
+    text: 'Meu jogo evoluiu de maneiras que eu não imaginava serem possíveis, tudo graças às lições do Mestre Felipe Silva. Seu estilo de ensino envolvente e foco nas estratégias práticas tornam cada aula inestimável.',
+    image: 'https://source.unsplash.com/random?person&11/100x100',
   },
   {
-    name: 'Depoimento 15',
-    text: 'Pellentesque euismod venenatis nibh, nec commodo justo tristique eu. Vivamus finibus ipsum et nisl efficitur, id gravida urna cursus. In hac habitasse platea dictumst.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Isadora Oliveira',
+    text: 'A Professora Ana Oliveira tornou as aberturas do xadrez fascinantes e compreensíveis. Sua paixão pelo ensino é evidente em cada aula, e isso fez uma enorme diferença em meu jogo. Estou muito satisfeita!',
+    image: 'https://source.unsplash.com/random?person&12/100x100',
   },
   {
-    name: 'Depoimento 16',
-    text: 'Curabitur sit amet ipsum a felis fermentum gravida. Sed rhoncus tellus nec cursus aliquet. Nam ac nunc eu felis vehicula ultricies vel nec nisl.',
-    image: 'https://source.unsplash.com/random/100x100',
+    name: 'Pedro Silva',
+    text: 'Treinar com o GM Ricardo Santos foi uma experiência que mudou meu jogo. Sua visão estratégica e dicas práticas fizeram uma diferença notável na minha abordagem ao xadrez. Estou ansioso para aprender mais!',
+    image: 'https://source.unsplash.com/random?person&13/100x100',
   },
   {
-    name: 'Depoimento 17',
-    text: 'Integer at justo id sapien varius ullamcorper. Nulla facilisi. Morbi euismod ullamcorper elit, vel tristique libero aliquam id.',
-    image: 'https://source.unsplash.com/random/100x100',
-  },
-  {
-    name: 'Depoimento 18',
-    text: 'Quisque sit amet velit eu dui facilisis consectetur. Sed suscipit, enim eu ultricies cursus, felis metus auctor justo, id vehicula mi quam vel augue.',
-    // image: 'https://source.unsplash.com/random/100x100',
+    name: 'Juliana Rocha',
+    text: 'A Mestra Clara Rocha tem um dom especial para ensinar as complexidades do xadrez. Sua abordagem prática e focada na psicologia do jogo foram cruciais para meu progresso. Uma mestra inspiradora!',
+    image: 'https://source.unsplash.com/random?person&14/100x100',
   },
 ]
 
-export { pages, socials, aboutSections, testimonials }
+const faq = [
+  {
+    id: '1',
+    title: 'Como faço para me inscrever nos cursos?',
+    content:
+      'Basta clicar no botão "Inscreva-se" na página principal e seguir as instruções simples. Após a inscrição, você terá acesso imediato a todas as aulas e materiais do curso escolhido.',
+  },
+  {
+    id: '2',
+    title: 'Quanto tempo leva para concluir um curso?',
+    content:
+      'A duração de cada curso varia, mas em média, os alunos concluem os cursos fundamentais em cerca de 6 a 8 semanas. No entanto, você pode aprender no seu próprio ritmo, e o acesso ao conteúdo fica disponível mesmo após a conclusão.',
+  },
+  {
+    id: '3',
+    title: 'Os cursos são adequados para iniciantes?',
+    content:
+      'Sim, absolutamente! Oferecemos cursos que atendem a todos os níveis de habilidade, desde iniciantes até jogadores avançados. Cada curso é estruturado para fornecer uma base sólida e, ao mesmo tempo, desafiar jogadores mais experientes.',
+  },
+  {
+    id: '4',
+    title: 'Posso acessar os cursos em dispositivos móveis?',
+    content:
+      'Sim, os cursos são otimizados para serem acessados em dispositivos móveis, proporcionando flexibilidade para aprender em qualquer lugar. Basta fazer login na sua conta em nosso site e começar a aprender no seu smartphone ou tablet.',
+  },
+  {
+    id: '5',
+    title: 'Existe suporte disponível durante o curso?',
+    content:
+      'Certamente! Nossos instrutores estão disponíveis para responder às suas dúvidas e fornecer orientações adicionais durante todo o curso. Além disso, temos uma comunidade ativa onde os alunos podem interagir e trocar experiências.',
+  },
+  {
+    id: '6',
+    title: 'Posso fazer perguntas específicas sobre jogadas?',
+    content:
+      'Sim, incentivamos os alunos a participar ativamente. Você pode fazer perguntas específicas sobre jogadas, estratégias ou qualquer aspecto do jogo. Nossos instrutores terão prazer em fornecer esclarecimentos detalhados.',
+  },
+  {
+    id: '7',
+    title: 'Os cursos oferecem certificados de conclusão?',
+    content:
+      'Sim, ao concluir com sucesso um curso, você receberá um certificado de conclusão. Este certificado reconhece o seu comprometimento com aprimorar suas habilidades no xadrez e pode ser uma adição valiosa ao seu currículo.',
+  },
+]
+
+export { pages, socials, aboutSections, testimonials, faq }

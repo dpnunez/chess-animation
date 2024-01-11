@@ -25,8 +25,7 @@ const Testimonial = () => {
         Depoimentos
       </h2>
       <h3 className="max-md:text-center text-2xl text-gray-500 font-normal container mx-auto">
-        Lorem ipsum dolor sit amet, consectetur
-        <br /> adipiscing elit. Proin tincidunt
+        Veja o que nossos alunos estão falando sobre nós
       </h3>
       <div className="flex w-full overflow-auto py-3 mt-10 scrollbar-none">
         {testimonials.map((item, i) => {

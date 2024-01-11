@@ -9,17 +9,16 @@ export const Hero = () => {
         {...anim(container)}
         className="flex-[1] flex flex-col justify-center gap-16 items-center md:items-start my-10 max-md:text-center"
       >
-        <h1 className="text-5xl font-bold">
-          Lorem Ipsum <br />
-          Dolor imet
-        </h1>
-        <h2 className="text-xl leading-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu
-          convallis, facilisis enim eu, blandit nunc.
-        </h2>
+        <div className="flex flex-col gap-6">
+          <h1 className="text-5xl font-bold">Treine com os melhores</h1>
+          <h2 className="text-xl leading-8">
+            Aprimore suas habilidades no xadrez com a expertise de alguns dos
+            melhores jogadores brasileiros. Aprenda e evolua no jogo junto
+            conosco. Venha fazer parte dessa jornada de crescimento!
+          </h2>
+        </div>
         <button className="bg-primary-500 text-xl text-white rounded-full py-4 px-9 font-bold">
-          Lorem ipsum
+          Comece agora
         </button>
       </motion.div>
       <div className="flex-[2] items-center justify-center overflow-visible hidden md:flex">

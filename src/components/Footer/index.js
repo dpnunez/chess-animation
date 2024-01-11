@@ -14,8 +14,8 @@ export const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row md:gap-11 gap-5">
           <div className="flex flex-col flex-1 gap-20 pr-20">
             <h3 className=" text-2xl">
-              Lorem ipsum dolor sit amet <br />
-              consectetur adipisicing elit. Quisquam
+              Atinja o próximo nível no <br />
+              xadrez trainando com os melhores!
             </h3>
             <Logo />
             <p className=" font-medium text-xl">Copyright © dpnunez 2024</p>

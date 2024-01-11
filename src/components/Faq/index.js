@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { arrow, container, contentAnim, contentText, list } from './anim'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
+import { faq } from '@/constants'
 
 export const Faq = () => {
   const [openAccortion, setOpenAccortion] = useState(null)
@@ -11,7 +12,7 @@ export const Faq = () => {
     <div className="my-section-spacing container mx-auto ">
       <h2 className="section-title text-center">Perguntas frequentes</h2>
       <div className="flex flex-col gap-4 md:max-w-[50%] mx-auto">
-        {accordions.map((accordion, i) => (
+        {faq.map((accordion, i) => (
           <motion.div key={accordion.id} {...anim(list, i)}>
             <Accortion.root
               open={openAccortion === accordion.id}
@@ -82,30 +83,3 @@ const Accortion = {
   title: AccortionTitle,
   content: AccortionContent,
 }
-
-const accordions = [
-  {
-    id: '1',
-    title: 'Como funciona?',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu convallis, facilisis enim eu, blandit nunc.',
-  },
-  {
-    id: '2',
-    title: 'Como funciona?',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu convallis, facilisis enim eu, blandit nunc.',
-  },
-  {
-    id: '3',
-    title: 'Como funciona?',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu convallis, facilisis enim eu, blandit nunc.',
-  },
-  {
-    id: '4',
-    title: 'Como funciona?',
-    content:
-      ' id auctor justo cursus vitae. Vestibulum id auctor justo cursus vitae. Vestibulum id auctor justo cursus vitae. Vestibulum id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. VestibulumLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tempor eros, id auctor justo cursus vitae. Vestibulum a arcu convallis, facilisis enim eu, blandit nunc.',
-  },
-]
