@@ -17,7 +17,7 @@ export const Hero = () => {
             conosco. Venha fazer parte dessa jornada de crescimento!
           </h2>
         </div>
-        <button className="bg-primary-500 text-xl text-white rounded-full py-4 px-9 font-bold">
+        <button className="bg-primary-500 text-xl text-white rounded-md py-4 px-9 font-bold">
           Comece agora
         </button>
       </motion.div>

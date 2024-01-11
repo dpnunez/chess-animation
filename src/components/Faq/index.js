@@ -11,7 +11,7 @@ export const Faq = () => {
   return (
     <div className="my-section-spacing container mx-auto ">
       <h2 className="section-title text-center">Perguntas frequentes</h2>
-      <div className="flex flex-col gap-4 md:max-w-[50%] mx-auto">
+      <div className="flex flex-col md:max-w-[50%] mx-auto">
         {faq.map((accordion) => (
           <FaqItem
             accordion={accordion}
@@ -37,7 +37,10 @@ const FaqItem = ({ accordion, openAccortion, setOpenAccortion }) => {
   const scale = useTransform(scrollYProgress, [0, 0.4], [0.87, 1])
 
   return (
-    <div ref={ref}>
+    <div
+      ref={ref}
+      className="border-b-2 border-gray-300 last-of-type:border-b-0"
+    >
       <motion.div
         className="opacity-0 scale-95 origin-bottom"
         key={accordion.id}
