@@ -43,6 +43,8 @@ const FaqItem = ({ accordion, openAccortion, setOpenAccortion }) => {
         key={accordion.id}
         style={{ opacity, x }}
       >
+        <p className="sr-only">{accordion.title}</p>
+        <p className="sr-only">{accordion.contnet}</p>
         <Accortion.root
           open={openAccortion === accordion.id}
           handleOpen={() => setOpenAccortion(accordion.id)}
