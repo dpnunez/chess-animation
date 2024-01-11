@@ -1,7 +1,7 @@
 import { anim, cn } from '@/styles/helpers'
 import { Link } from '../Link'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { cardAnimation, textAnim } from './anim'
+import { textAnim } from './anim'
 import { AnimatedText } from '../AnimatedText'
 import { useRef } from 'react'
 
@@ -10,17 +10,17 @@ const CoursesPage = ({ data }) => {
     <div className="page-wrapper">
       <div className="mb-32 flex flex-col gap-3">
         <AnimatedText className="text-md uppercase font-bold text-primary-500">
-          Lorem ipsum dolor sit amet
+          Para todos os níveis
         </AnimatedText>
-        <motion.h1 {...anim(textAnim)} className="page-title ">
+        <motion.h1 {...anim(textAnim)} className="page-title mb-5">
           Cursos
         </motion.h1>
         <motion.h2
           {...anim(textAnim)}
           className="text-2xl text-gray-500 leading-10"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae
-          semper nisl. Sed euismod.
+          Escolha o curso que mais se encaixa no seu perfil
+          <br /> e comece a aprender ainda hoje
         </motion.h2>
       </div>
 

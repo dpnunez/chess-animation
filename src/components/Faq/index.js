@@ -12,7 +12,7 @@ export const Faq = () => {
     <div className="my-section-spacing container mx-auto ">
       <h2 className="section-title text-center">Perguntas frequentes</h2>
       <div className="flex flex-col gap-4 md:max-w-[50%] mx-auto">
-        {faq.map((accordion, i) => (
+        {faq.map((accordion) => (
           <FaqItem
             accordion={accordion}
             setOpenAccortion={setOpenAccortion}

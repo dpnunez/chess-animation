@@ -1,5 +1,4 @@
 import { colors } from '@/theme'
-import { transform } from 'framer-motion'
 
 const contentAnim = {
   initial: { opacity: 0, height: 0 },
