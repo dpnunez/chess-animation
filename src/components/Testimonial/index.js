@@ -20,7 +20,7 @@ const card = {
 
 const Testimonial = () => {
   return (
-    <div className="flex flex-col w-screen bg-black py-16 text-white relative">
+    <div className="flex flex-col w-full bg-black py-16 text-white relative">
       <h2 className="max-md:text-center container mx-auto section-title">
         Depoimentos
       </h2>
