@@ -53,6 +53,7 @@ const list = {
     opacity: 1,
     x: 0,
     transition: {
+      ease: [0.76, 0, 0.24, 1],
       delay: i * 0.1,
     },
   }),

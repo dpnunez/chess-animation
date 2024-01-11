@@ -41,7 +41,7 @@ export const AnalysisPost = ({
         </InternalHeader.Root>
         <motion.div
           {...anim(boardAnim)}
-          className="max-w-screen-lg relative mx-auto my-7"
+          className="max-w-[70dvh] relative mx-auto my-7"
         >
           <Board pgn={pgn} />
         </motion.div>

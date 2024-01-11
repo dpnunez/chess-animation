@@ -23,7 +23,7 @@ const CoursesPage = ({ data }) => {
         </motion.h2>
       </div>
 
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col max-md:gap-14">
         {data.map((course, index) => (
           <motion.div {...anim(cardAnimation)} key={course.name}>
             <CourseCard.Root isRight={index % 2}>
@@ -82,18 +82,13 @@ const CourseCardRoot = ({ children, isRight }) => {
   const action = children.find((child) => child.type === CourseCardAction)
   return (
     <div
-      className={cn('flex', {
+      className={cn('flex max-md:flex-col max-md:gap-5', {
         'flex-row-reverse': isRight,
       })}
     >
       <div className="flex-1">{image}</div>
       <div className={cn('flex-1 flex flex-col justify-center')}>
-        <div
-          className={cn('flex flex-col gap-4', {
-            'mr-10': isRight,
-            'ml-10': !isRight,
-          })}
-        >
+        <div className={cn('flex flex-col gap-4 w-full md:w-[70%] mx-auto ')}>
           {title}
           {description}
           {action}
