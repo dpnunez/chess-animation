@@ -3,14 +3,14 @@ const variants = {
     x: '100%',
     transition: {
       duration: 0.3,
-      ease: [0.34, 1.56, 0.64, 1],
+      ease: [0.33, 1, 0.68, 1],
     },
   },
   left: {
     x: '0',
     transition: {
       duration: 0.3,
-      ease: [0.34, 1.56, 0.64, 1],
+      ease: [0.33, 1, 0.68, 1],
     },
   },
 }
@@ -22,10 +22,18 @@ const currentImageAnim = {
   enter: {
     x: 20,
     y: 100,
+    transition: {
+      duration: 0.3,
+      ease: [0.33, 1, 0.68, 1],
+    },
   },
   exit: (imagePosition) => ({
     x: imagePosition === 'left' ? 1000 : -1000,
     opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: [0.33, 1, 0.68, 1],
+    },
   }),
 }
 
@@ -54,4 +62,15 @@ const textAnim = {
   },
 }
 
-export { variants, currentImageAnim, backgroundImage, textAnim }
+const itemText = {
+  initial: {
+    opacity: 0,
+    scale: 0.85,
+  },
+  enter: (flag) => ({
+    opacity: flag ? 1 : 0,
+    scale: flag ? 1 : 0.85,
+  }),
+}
+
+export { variants, currentImageAnim, backgroundImage, textAnim, itemText }

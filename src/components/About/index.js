@@ -1,19 +1,22 @@
 import { aboutSections } from '@/constants'
-import { cn } from '@/styles/helpers'
+import { anim, cn } from '@/styles/helpers'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { HeadeAbout } from './Header'
 import { ImageGallery } from './ImageGallery'
+import { itemText } from './anim'
 // import ReactLenis from '@studio-freight/react-lenis'
 
-const AboutItemWrapper = ({ children, isRight, onViewportEnter }) => {
+const AboutItemWrapper = ({ children, isRight, onViewportEnter, active }) => {
   return (
     <motion.div
+      initial="hidden"
+      {...anim(itemText, active)}
       className={cn(
         'flex flex-col gap-4 justify-center md:w-[45%] md:min-h-[100dvh] items-start max-md:mb-32',
         {
-          'mr-auto': isRight,
-          'ml-auto': !isRight,
+          'mr-auto origin-bottom-left': isRight,
+          'ml-auto origin-bottom-right': !isRight,
         },
       )}
     >
@@ -26,6 +29,7 @@ const AboutItemWrapper = ({ children, isRight, onViewportEnter }) => {
 const AboutPage = () => {
   const [imagePosition, setImagePosition] = useState('left')
   const [currentImage, setCurrentImage] = useState(aboutSections[0].image)
+  const [currentItem, setCurrentItem] = useState(0)
 
   return (
     // <ReactLenis root>
@@ -41,10 +45,12 @@ const AboutPage = () => {
           return (
             <AboutItemWrapper
               isRight={right}
+              active={currentItem === index}
               key={section.title}
               onViewportEnter={() => {
                 setImagePosition(right ? 'right' : 'left')
                 setCurrentImage(section.image)
+                setCurrentItem(index)
               }}
             >
               <span className="text-primary-500 bg-primary-500/15 p-2 py-1 rounded-md font-bold">

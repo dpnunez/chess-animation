@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GroupIcon, PersonIcon } from '@radix-ui/react-icons'
+import { PersonIcon } from '@radix-ui/react-icons'
 import { anim } from '@/styles/helpers'
 import { Whatsapp } from '../Icons'
 import { testimonials } from '@/constants'
