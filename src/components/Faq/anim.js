@@ -1,4 +1,5 @@
 import { colors } from '@/theme'
+import { transform } from 'framer-motion'
 
 const contentAnim = {
   initial: { opacity: 0, height: 0 },
@@ -44,19 +45,4 @@ const arrow = {
   },
 }
 
-const list = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  view: (i) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      ease: [0.76, 0, 0.24, 1],
-      delay: i * 0.1,
-    },
-  }),
-}
-
-export { contentAnim, contentText, container, arrow, list }
+export { contentAnim, contentText, container, arrow }

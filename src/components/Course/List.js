@@ -1,8 +1,9 @@
 import { anim, cn } from '@/styles/helpers'
 import { Link } from '../Link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { cardAnimation, textAnim } from './anim'
 import { AnimatedText } from '../AnimatedText'
+import { useRef } from 'react'
 
 const CoursesPage = ({ data }) => {
   return (
@@ -25,29 +26,51 @@ const CoursesPage = ({ data }) => {
 
       <div className="w-full flex flex-col max-md:gap-14">
         {data.map((course, index) => (
-          <motion.div {...anim(cardAnimation)} key={course.name}>
-            <CourseCard.Root isRight={index % 2}>
-              <CourseCard.Image src={course.cover} alt={course.name} />
-              <CourseCard.Title>{course.name}</CourseCard.Title>
-              <CourseCard.Description>
-                {course.shortDescription}
-              </CourseCard.Description>
-              <CourseCard.Action>
-                <Link
-                  {...(course.externalUrl && {
-                    target: '_blank',
-                  })}
-                  href={course.externalUrl || `/courses/${course.slug}`}
-                  className="text-2xl text-primary-500"
-                >
-                  Saiba mais
-                </Link>
-              </CourseCard.Action>
-            </CourseCard.Root>
-          </motion.div>
+          <Course course={course} index={index} key={course.name} />
         ))}
       </div>
     </div>
+  )
+}
+
+const Course = ({ course, index }) => {
+  const ref = useRef()
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', '0.35 start'],
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
+  const x = useTransform(scrollYProgress, [0, 0.5], [-100, 0])
+
+  return (
+    <motion.div
+      ref={ref}
+      key={course.name}
+      style={{
+        opacity,
+        x,
+      }}
+    >
+      <CourseCard.Root isRight={index % 2}>
+        <CourseCard.Image src={course.cover} alt={course.name} />
+        <CourseCard.Title>{course.name}</CourseCard.Title>
+        <CourseCard.Description>
+          {course.shortDescription}
+        </CourseCard.Description>
+        <CourseCard.Action>
+          <Link
+            {...(course.externalUrl && {
+              target: '_blank',
+            })}
+            href={course.externalUrl || `/courses/${course.slug}`}
+            className="text-2xl text-primary-500"
+          >
+            Saiba mais
+          </Link>
+        </CourseCard.Action>
+      </CourseCard.Root>
+    </motion.div>
   )
 }
 

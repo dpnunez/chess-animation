@@ -1,7 +1,7 @@
 import { anim } from '@/styles/helpers'
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
-import { arrow, container, contentAnim, contentText, list } from './anim'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { arrow, container, contentAnim, contentText } from './anim'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { faq } from '@/constants'
 
@@ -13,18 +13,45 @@ export const Faq = () => {
       <h2 className="section-title text-center">Perguntas frequentes</h2>
       <div className="flex flex-col gap-4 md:max-w-[50%] mx-auto">
         {faq.map((accordion, i) => (
-          <motion.div key={accordion.id} {...anim(list, i)}>
-            <Accortion.root
-              open={openAccortion === accordion.id}
-              handleOpen={() => setOpenAccortion(accordion.id)}
-              handleClose={() => setOpenAccortion(null)}
-            >
-              <Accortion.title>{accordion.title}</Accortion.title>
-              <Accortion.content>{accordion.content}</Accortion.content>
-            </Accortion.root>
-          </motion.div>
+          <FaqItem
+            accordion={accordion}
+            setOpenAccortion={setOpenAccortion}
+            openAccortion={openAccortion}
+            key={accordion.id}
+          />
         ))}
       </div>
+    </div>
+  )
+}
+
+const FaqItem = ({ accordion, openAccortion, setOpenAccortion }) => {
+  const ref = useRef(null)
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'start 60vh'],
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
+  const x = useTransform(scrollYProgress, [0, 0.5], [-100, 0])
+
+  return (
+    <div ref={ref}>
+      <motion.div
+        className="opacity-0 scale-95"
+        key={accordion.id}
+        style={{ opacity, x }}
+      >
+        <Accortion.root
+          open={openAccortion === accordion.id}
+          handleOpen={() => setOpenAccortion(accordion.id)}
+          handleClose={() => setOpenAccortion(null)}
+        >
+          <Accortion.title>{accordion.title}</Accortion.title>
+          <Accortion.content>{accordion.content}</Accortion.content>
+        </Accortion.root>
+      </motion.div>
     </div>
   )
 }
