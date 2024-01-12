@@ -33,7 +33,7 @@ const Testimonial = () => {
       <div
         {...events}
         ref={containerScroll}
-        className="flex w-full overflow-scroll py-3 px-4 mt-10 scrollbar-none"
+        className="flex w-full overflow-scroll py-3 px-4 mt-10 scrollbar-none cursor-grab"
       >
         {testimonials.map((item, i) => {
           return (

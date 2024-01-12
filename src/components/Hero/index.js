@@ -1,6 +1,8 @@
 import { anim } from '@/styles/helpers'
 import { motion } from 'framer-motion'
 import { card, container } from './anim'
+import { Arrow } from '../Arrow'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
 
 export const Hero = () => {
   return (
@@ -17,9 +19,10 @@ export const Hero = () => {
             conosco. Venha fazer parte dessa jornada de crescimento!
           </h2>
         </div>
-        <button className="bg-primary-500 text-xl text-white rounded-md py-4 px-9 font-bold">
+        {/* <button className="bg-primary-500 text-xl text-white rounded-md py-4 px-9 font-bold">
           Comece agora
-        </button>
+        </button> */}
+        <CTAButton>Comece agora</CTAButton>
       </motion.div>
       <div className="flex-[2] items-center justify-center overflow-visible hidden md:flex">
         <HeroImage />
@@ -70,5 +73,24 @@ const HeroImage = () => {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+const CTAButton = ({ children, ...props }) => {
+  return (
+    <button
+      type="button"
+      className="relative flex items-center group"
+      {...props}
+    >
+      <div className="w-16 aspect-square flex items-center justify-center">
+        <div className="transition-all ease-in-out duration-500 absolute w-16 group-hover:w-full h-full bg-primary-reverse z-10 rounded-md top-0 left-0 " />
+        <div className="transition-all ease-in-out duration-500 absolute w-16 h-full group-hover:w-full saturate-150 backdrop-invert z-20 rounded-md top-0 left-0" />
+        <div className="relative z-10">
+          <ArrowRightIcon width={28} height={28} className="text-black" />
+        </div>
+      </div>
+      <span className="z-10 px-6 pr-10 text-xl font-bold">{children}</span>
+    </button>
   )
 }

@@ -1,5 +1,3 @@
-import { colors } from '@/theme'
-
 const contentAnim = {
   initial: { opacity: 0, height: 0 },
   enter: {
@@ -39,6 +37,9 @@ const container = {
 }
 
 const cardBg = {
+  initial: {
+    y: '100%',
+  },
   opened: {
     y: 0,
     transition: {

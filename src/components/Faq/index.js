@@ -86,7 +86,7 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
       className="cursor-pointer overflow-hidden transition-colors relative"
     >
       <button
-        className="p-8 flex w-full justify-between z-10 relative"
+        className="p-8 flex w-full justify-between z-10 relative focus:outline-none focus-visible:outline-none"
         onClick={handleClick}
       >
         {title}
@@ -114,7 +114,7 @@ const AccortionRoot = ({ open, children, handleOpen, handleClose }) => {
       />
       <motion.div
         {...bgAnimation}
-        className="absolute z-20 backdrop-invert bottom-0 h-full w-full left-0 pointer-events-none"
+        className="absolute z-20 saturate-150 backdrop-invert bottom-0 h-full w-full left-0 pointer-events-none"
       />
     </motion.div>
   )

@@ -5,8 +5,8 @@ export const colors = {
 
   //  primary
   primary: {
-    500: '#DD6900',
-    reverse: '#2294fe',
+    500: '#f76f00',
+    reverse: '#0086ff',
   },
   gray: {
     300: '#E7E7E7',

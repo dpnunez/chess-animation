@@ -12,7 +12,7 @@ export const Arrow = ({ className }) => {
       )}
       {...anim(circleAnim)}
     >
-      <motion.div {...anim(icon)}>
+      <motion.div {...anim(icon)} className="text-white">
         <ArrowRightIcon />
       </motion.div>
     </motion.div>

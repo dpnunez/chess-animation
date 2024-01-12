@@ -37,7 +37,3 @@ body {
 *:active, *:focus {
   @apply outline-primary-500;
 }
-
-.scroll-snap-x {
-  scroll-snap-type: x mandatory;
-}
