@@ -203,7 +203,6 @@ const PaginationWrapper = ({ meta }) => {
 }
 
 export const AnalysisList = ({ data, meta }) => {
-  console.log(data)
   return (
     <motion.div className="page-wrapper">
       <PageHeader counter={meta.pagination.total} />

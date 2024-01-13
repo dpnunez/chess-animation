@@ -1,4 +1,11 @@
-import { Divider, Faq, Hero, Instructors, Testimonial } from '@/components'
+import {
+  CoursePreviewSection,
+  Divider,
+  Faq,
+  Hero,
+  Instructors,
+  Testimonial,
+} from '@/components'
 
 export default function Home() {
   return (
@@ -6,6 +13,7 @@ export default function Home() {
       <Hero />
       <Instructors />
       <Divider />
+      <CoursePreviewSection />
       <Testimonial />
       <Faq />
     </>
