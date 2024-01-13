@@ -35,13 +35,14 @@ const Subtitle = ({ children, className }) => (
   </motion.h2>
 )
 
-const Root = ({ children }) => {
+const Root = ({ children: _children, className }) => {
+  const children = Array.isArray(_children) ? _children : [_children]
   const title = children.find((child) => child.type === Title)
   const badge = children.find((child) => child.type === Badge)
   const subtitle = children.find((child) => child.type === Subtitle)
 
   return (
-    <div className="flex flex-col">
+    <div className={cn('flex flex-col', className)}>
       {badge}
       {title}
       {subtitle}

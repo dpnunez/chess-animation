@@ -53,7 +53,7 @@ export const Footer = () => {
                   lorem@ipsum.com
                 </Link>
                 <Link href="tel:" className="text-xl">
-                  (11) 99999-9999
+                  {process.env.NEXT_PUBLIC_PHONE}
                 </Link>
               </ul>
             </div>
