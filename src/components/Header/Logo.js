@@ -11,7 +11,7 @@ export const Logo = () => (
       <div className="text-black text-2xl font-bold leading-6">
         Chess
         <br />
-        Name
+        Master
       </div>
     </LinkNext>
   </motion.div>
