@@ -1,3 +1,6 @@
+
+![Slide 16_9 - 1 (1) (1)](https://github.com/dpnunez/chess-animation/assets/46852072/1b6ae1a9-f427-4b31-abe3-7ae1391de720)
+
 # ChessMaster - Chess Courses and Content Platform
 
 Welcome to ChessMaster, a platform dedicated to providing chess courses and educational content for chess enthusiasts. Developed using the Next.js framework, this project integrates various libraries and tools to offer an engaging and educational experience.
